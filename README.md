@@ -1,5 +1,4 @@
 # DETRIS
-<<<<<<< HEAD
 
 This is an official PyTorch of [Densely Connected Parameter-Efficient Tuning for Referring Image Segmentation](https://arxiv.org/abs/2501.08580).
 # Overall Architecture
@@ -56,6 +55,7 @@ If you want to visualize the results, simply modify the `visualize` to `True` in
 | DETRIS-B (Ours)             | 76.0          | 78.2            | 73.5           | 68.9           | 74.0             | 61.5            | 67.9          | 68.1            | 65.9           | 70.4  |
 | DETRIS-L (Ours)             | 77.3      | 79.0        | 75.2       | 70.8       | 75.3         | 64.7        | 69.3      | 70.2        | 67.9       | 72.2 |
 | DETRIS-L* (Ours)            | 81.0      | 81.9            | 79.0       | 75.2       | 78.6         | 70.2        | 74.6      | 75.3        | -              | 77.2 |
+
 \* are tuned using the mixed RefCOCO/RefCOCO+/G-Ref datasets
 ## Weights
 
@@ -80,6 +80,4 @@ If DETRIS is useful for your research, please consider citing:
       url={https://arxiv.org/abs/2501.08580}, 
 }
 ```
-=======
-[AAAI-2025] The official code of Densely Connected Parameter-Efficient Tuning for Referring Image Segmentation
->>>>>>> 8ade501711e669101e74213139a44a011c7ae1b3
+
