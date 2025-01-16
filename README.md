@@ -1,12 +1,12 @@
 # DETRIS
 
-This is an official PyTorch of [Densely Connected Parameter-Efficient Tuning for Referring Image Segmentation](https://arxiv.org/abs/2501.08580).
+This is an official PyTorch implementation of [Densely Connected Parameter-Efficient Tuning for Referring Image Segmentation](https://arxiv.org/abs/2501.08580).
+
 # Overall Architecture
 
 <img src="img/image.png">
 
 # preparation
-
 
 ## Environment
 ```bash
@@ -20,12 +20,12 @@ pip install -r requirement.txt
 The detailed instruction is in [prepare_datasets.md](tools/prepare_datasets.md)
 
 ## Pretrained weights
-Download the pretrained weights of DINOv2-B,DINOV2-L and ViT-B to pretrain
+Download the pretrained weights of DiNOv2-B, DiNOv2-L and ViT-B to pretrain
 ```bash
 mkdir pretrain && cd pretrain
-## DINOv2-B
+## DiNOv2-B
 wget https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_reg4_pretrain.pth
-## DINOV2-L
+## DiNOv2-L
 wget https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_reg4_pretrain.pth
 ## ViT-B
 wget https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt
@@ -33,7 +33,7 @@ wget https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eab
 
 # Quick Start
 
-To do training of DETRIS, modify the script according to your requirement and run:
+To train DETRIS, modify the script according to your requirements and run it:
 
 ```
 bash run_scripts/train.sh
@@ -56,14 +56,15 @@ If you want to visualize the results, simply modify the `visualize` to `True` in
 | DETRIS-L (Ours)             | 77.3      | 79.0        | 75.2       | 70.8       | 75.3         | 64.7        | 69.3      | 70.2        | 67.9       | 72.2 |
 | DETRIS-L* (Ours)            | 81.0      | 81.9            | 79.0       | 75.2       | 78.6         | 70.2        | 74.6      | 75.3        | -              | 77.2 |
 
-\* are tuned using the mixed RefCOCO/RefCOCO+/G-Ref datasets
+\* denotes tuned using the mixed RefCOCO/RefCOCO+/G-Ref datasets
+
 ## Weights
 
-The weights of our model will soon be released。
+The weights of our model will soon be released.
 
 # Acknowledgements
 
-The code is based on [CRIS](https://github.com/DerrickWang005/CRIS.pytorch), [ETRIS](https://github.com/kkakkkka/ETRIS), [DINOV2](https://github.com/facebookresearch/dinov2). We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
+The code is based on [CRIS](https://github.com/DerrickWang005/CRIS.pytorch), [ETRIS](https://github.com/kkakkkka/ETRIS) and [DiNOv2](https://github.com/facebookresearch/dinov2). We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
 
 # Citation
 
