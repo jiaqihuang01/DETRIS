@@ -63,7 +63,7 @@ The weights of our model will soon be released。
 
 # Acknowledgements
 
-The code is based on [CRIS](https://github.com/DerrickWang005/CRIS.pytorch) [ETRIS](https://github.com/kkakkkka/ETRIS) [DINOV2](https://github.com/facebookresearch/dinov2). We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
+The code is based on [CRIS](https://github.com/DerrickWang005/CRIS.pytorch), [ETRIS](https://github.com/kkakkkka/ETRIS), [DINOV2](https://github.com/facebookresearch/dinov2). We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
 
 # Citation
 
