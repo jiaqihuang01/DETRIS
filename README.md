@@ -6,7 +6,7 @@ This is an official PyTorch implementation of [Densely Connected Parameter-Effic
 
 <img src="img/image.png">
 
-# preparation
+# Preparation
 
 ## Environment
 ```bash
