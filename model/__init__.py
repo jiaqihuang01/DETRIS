@@ -11,7 +11,7 @@ def build_segmenter(args):
     proj = []
     fix = []
     for k, v in model.named_parameters():
-        if (k.startswith('backbone') and 'positional_embedding' not in k  or 'dinov2' in k) and v.requires_grad:
+        if (k.startswith('txt_backbone') and 'positional_embedding' not in k  or 'dinov2' in k) and v.requires_grad:
             backbone.append(v)
         elif v.requires_grad:
             head.append(v)

@@ -60,7 +60,7 @@ If you want to visualize the results, simply modify the `visualize` to `True` in
 
 ## Weights
 
-The weights of our model will soon be released.
+Our model weights have already been open-sourced and can be directly downloaded from https://huggingface.co/x6team/DETRIS/tree/main.
 
 # Acknowledgements
 
