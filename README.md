@@ -71,14 +71,11 @@ The code is based on [CRIS](https://github.com/DerrickWang005/CRIS.pytorch), [ET
 If DETRIS is useful for your research, please consider citing:
 
 ```angular2html
-@misc{huang2025denselyconnectedparameterefficienttuning,
-      title={Densely Connected Parameter-Efficient Tuning for Referring Image Segmentation}, 
-      author={Jiaqi Huang and Zunnan Xu and Ting Liu and Yong Liu and Haonan Han and Kehong Yuan and Xiu Li},
-      year={2025},
-      eprint={2501.08580},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2501.08580}, 
+@article{huang2025densely,
+  title={Densely Connected Parameter-Efficient Tuning for Referring Image Segmentation},
+  author={Huang, Jiaqi and Xu, Zunnan and Liu, Ting and Liu, Yong and Han, Haonan and Yuan, Kehong and Li, Xiu},
+  journal={arXiv preprint arXiv:2501.08580},
+  year={2025}
 }
 ```
 
