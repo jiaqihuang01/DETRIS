@@ -35,6 +35,10 @@ info = {
         'train': 44822,
         'val': 5000,
         'val-test': 5000
+    },
+    'refcoco_mixed': {
+        'train': 126908, # 42404+42278+42226=126908
+        'val': 10189, # 3811+3805+2573=10189
     }
 }
 _tokenizer = _Tokenizer()
