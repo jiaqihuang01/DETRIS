@@ -607,8 +607,8 @@ def build_model(state_dict: dict, txt_length: int, new_resolution: int = -1, add
 
         
     if hasattr(model, "visual"):
-        del model.visual  # 删除模型的结构
-        # 删除 visual 模块相关的参数
+        del model.visual  
+        
         keys_to_remove = [key for key in state_dict.keys() if key.startswith("visual.")]
         for key in keys_to_remove:
             del state_dict[key]

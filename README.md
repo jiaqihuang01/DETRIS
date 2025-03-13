@@ -50,6 +50,7 @@ bash run_scripts/test.sh
 If you want to visualize the results, simply modify the `visualize` to `True` in the config file. 
 
 ## Results
+The mIoU result is as follows:
 | Method                       | RefCOCO (val) | RefCOCO (testA) | RefCOCO (testB) | RefCOCO+ (val) | RefCOCO+ (testA) | RefCOCO+ (testB) | G-Ref (val(u)) | G-Ref (test(u)) | G-Ref (val(g)) | Avg   |
 |------------------------------|---------------|------------------|-----------------|----------------|-------------------|------------------|----------------|------------------|----------------|-------|
 | DETRIS-B (Ours)             | 76.0          | 78.2            | 73.5           | 68.9           | 74.0             | 61.5            | 67.9          | 68.1            | 65.9           | 70.4  |
@@ -58,9 +59,29 @@ If you want to visualize the results, simply modify the `visualize` to `True` in
 
 \* denotes tuned using the mixed RefCOCO/RefCOCO+/G-Ref datasets
 
+The oIoU result is as follows:
+| Method           | RefCOCO (val) | RefCOCO (testA) | RefCOCO (testB) | RefCOCO+ (val) | RefCOCO+ (testA) | RefCOCO+ (testB) | G-Ref (val(u)) | G-Ref (test(u)) | G-Ref (val(g)) | Avg  |
+|------------------|---------------|-----------------|-----------------|----------------|------------------|------------------|----------------|-----------------|----------------|------|
+| DETRIS-B (Ours)  | 74.3          | 77.6            | 71.4            | 65.6           | 72.0             | 56.5             | 65.2           | 66.4            | 63.2           | 68.0 |
+| DETRIS-L (Ours)  | 76.1          | 78.3            | 73.2            | 67.9           | 73.3             | 60.2             | 66.8           | 68.0            | 65.0           | 69.9 |
+| DETRIS-L* (Ours) | 80.7          | 82.2            | 77.9            | 73.1           | 77.5             | 66.0             | 73.2           | 74.7            | -              | 75.7 |
+
+\* denotes tuned using the mixed RefCOCO/RefCOCO+/G-Ref datasets
+
 ## Weights
 
 Our model weights have already been open-sourced and can be directly downloaded from [Huggingface](https://huggingface.co/x6team/DETRIS/tree/main).
+
+# Demo
+You can use this command to visualize the segmentation map when working with your own images and text prompts.
+```shell
+python demo.py \
+    --config "config/refcoco/DETRIS_large.yaml" \
+    --ckpt "lagre_refcoco.pth" \
+    --img_path 'img/piece.png' \
+    --input_text 'left piece slice' \
+    --save_path 'img/left_piece_result.png'
+```
 
 # Acknowledgements
 

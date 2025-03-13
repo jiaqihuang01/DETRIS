@@ -133,7 +133,7 @@ def validate(val_loader, model, epoch, args):
 @torch.no_grad()
 def inference(test_loader, model, args):
     # evaluation variables from lavt
-    
+    cum_I, cum_U = 0, 0 
     iou_list = []
     tbar = tqdm(test_loader, desc='Inference:', ncols=100)
     model.eval()
@@ -186,7 +186,8 @@ def inference(test_loader, model, args):
                 pred_name = '{}-iou={:.2f}-{}.png'.format(seg_id, iou*100, sent)
                 cv2.imwrite(filename=os.path.join(args.vis_dir, pred_name),
                             img=pred)
-
+            cum_I += I
+            cum_U += U 
 
                 
     logger.info('=> Metric Calculation <=')
@@ -206,4 +207,5 @@ def inference(test_loader, model, args):
     for k, v in prec.items():
         logger.info('{}: {:.2f}.'.format(k, 100.*v))
 
+    logger.info('Overall IoU = %.2f\n' % (cum_I * 100. / cum_U))
     return iou.item(), prec

@@ -98,8 +98,14 @@ python ../tools/folder2lmdb.py -j anns/refcocog_g/val.json -i images/train2014/ 
 rm -r refcocog
 
 ```
+### 5.Mixed dataset
+Please run the following commands to generate a mixed dataset.
+```shell
+python tools/mix.py
+python tools/mix_mask.py
+```
 
-### 5. Datasets structure
+### 6. Datasets structure
 
 After the above-mentioned commands, the strutre of the dataset folder should be like:
 
