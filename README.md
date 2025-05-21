@@ -70,7 +70,7 @@ The oIoU result is as follows:
 
 ## Weights
 
-Our model weights have already been open-sourced and can be directly downloaded from [Huggingface](https://huggingface.co/x6team/DETRIS/tree/main).
+Our model weights have already been open-sourced and can be directly downloaded from [Huggingface](https://huggingface.co/thuteam/DETRIS/tree/main).
 
 # Demo
 You can use this command to visualize the segmentation map when working with your own images and text prompts.
